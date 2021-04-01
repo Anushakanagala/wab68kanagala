@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  div(class="container-fluid")
+  h1= title
+  - let results=[{name:"Nara",age:"12",breed:"Indian"},{name:"Abhi",age:"25",breed:"Asian"},{name:"lara",age:"23",breed:"American"}] 
+  div(class="row")
+    each form,index in results
+        div(class = "col-sm-2 bg-primary") #{form.name}
+        div(class = "col-sm-2 bg-primary") #{form.age}
+        div(class = "col-sm-2 bg-primary") #{form.breed}
